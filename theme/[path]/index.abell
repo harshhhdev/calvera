@@ -1,0 +1,27 @@
+{{
+  const { globalMeta, meta, importContent, $root } = Abell;
+  
+  const Navbar = require('../components/Navbar.abell')
+  const Footer = require('../components/Footer.abell')
+}}
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />  
+  <link rel="icon" href="{{$root}}/static-assets/images/favicon.ico"/>
+  <link rel="stylesheet" href="{{$root}}/static-assets/styles.css"/>
+
+  <title>{{ meta.title }} - {{ globalMeta.title }}</title>
+</head>
+<body>
+  <Navbar props={
+    shortName: globalMeta.shortName,
+    $root
+  } />
+  <main class="blog-content container">
+  {{ importContent(`${meta.$path}/index.md`) }}
+  </main>
+  <Footer/>
+</body>
+</html>
