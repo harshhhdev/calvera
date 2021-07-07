@@ -1,0 +1,31 @@
+{{
+  const { globalMeta, contentArray, $root } = Abell;
+
+  const Navbar = require('./components/Navbar.abell');
+  const BlogsList = require('./components/BlogsList.abell');
+  const Footer = require('./components/Footer.abell');
+
+  const SEO = require('./components/SEO.abell')
+  const Scripts = require('./components/Scripts.abell')
+
+  const Nav = require('./components/Nav/Nav.abell')
+  const Uses = require('./components/Uses/Uses.abell')
+}}
+<html lang="en">
+<head>
+  <SEO />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="{{ $root }}/static-assets/styles.css"/>
+  
+  <title>{{ globalMeta.title }}</title>
+</head>
+<body>
+  <main>
+    <Nav />
+    <Uses />
+  </main>
+  <Footer />
+  <Scripts />
+</body>
+</html>

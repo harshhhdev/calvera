@@ -11,6 +11,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -32,4 +33,20 @@ a:hover {
 
 ::selection {
   background-color: #35a6f740
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background: none;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--dark);
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: var(--main);
 }

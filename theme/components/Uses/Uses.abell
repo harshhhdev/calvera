@@ -1,0 +1,178 @@
+<AbellComponent>
+<template>
+    <main>
+        <div>
+            <div class="intro">
+                <h1>What I use.</h1>
+                <p class="desc">Here's a small overview of my setup. From software, to hardware -- this is how I make my magic happen</p>
+            </div>
+            <div class="category">
+                <h2 class="section-head">Software</h3>
+                <div class="section-list">
+                    <div class="section">
+                        <a href="https://neovim.io/" target="_blank">NeoVim</a>
+                        <p>Currently learning...</p>
+                    </div>
+                    <div class="section">
+                        <a href="https://neovim.io/" target="_blank">Visual Studio Code</a>
+                        <p>Until I learn NeoVim</p>
+                    </div>
+                    <div class="section">
+                        <a href="https://archlinux.org/" target="_blank">Arch Linux</a>
+                        <p>Been my distro for a few months now</p>
+                    </div>
+                    <div class="section">
+                        <a href="https://i3wm.org/" target="_blank">i3wm</a>
+                        <p>Amazing tiling window manager</p>
+                    </div>
+                    <div class="section">
+                        <a href="https://marketplace.visualstudio.com/items?itemName=saurabh.calvera-dark" target="_blank">Calvera Dark</a>
+                        <p>Recently switched to this theme</p>
+                    </div>
+                    <div class="section">
+                        <a href="https://jetbrains.com/lp/mono/" target="_blank">JetBrains Mono</a>
+                        <p>Favourite monospaced font</p>
+                    </div>
+                    <div class="section">
+                        <a href="https://fonts.google.com/specimen/Lexend+Deca?query=lexend" target="_blank">Lexend</a>
+                        <p>Favourite sans-serif font</p>
+                    </div>
+                    <div class="section">
+                        <a href="https://github.com/alacritty/alacritty" target="_blank">Alacritty</a>
+                        <p>Best terminal emulator I've used</p>
+                    </div>
+                    <div class="section">
+                        <a href="https://brave.com/" target="_blank">Brave</a>
+                        <p>Fastest browser, by far</p>
+                    </div>
+                    <div class="section">
+                        <a href="https://spotify.com/" target="_blank">Spotify</a>
+                        <p>My favourite genre is rap</p>
+                    </div>
+                </div>
+            </div>
+            <div class="category" target="_blank">
+                <h2 class="section-head" target="_blank">Tech</h3>
+                <div class="section-list" target="_blank">
+                    <div class="section">
+                        <a href="https://typescriptlang.org/" target="_blank">TypeScript</a>
+                        <p>In the process of learning</p>
+                    </div>
+                    <div class="section">
+                        <a href="https://nextjs.org/" target="_blank">Next.js</a>
+                        <p>Favourite frontend framework by far</p>
+                    </div>
+                    <div class="section">
+                        <a href="https://graphql.org/" target="_blank">GraphQL</a>
+                        <p>Learning more about</p>
+                    </div>
+                    <div class="section">
+                        <a href="https://prisma.io/" target="_blank">Prisma</a>
+                        <p>ORM I use with PostgreSQL</p>
+                    </div>
+                    <div class="section">
+                        <a href="https://www.postgresql.org/" target="_blank">PostgreSQL</a>
+                        <p>Recently switched from MongoDB</p>
+                    </div>
+                    <div class="section">
+                        <a href="https://www.fastify.io/" target="_blank">Fastify</a>
+                        <p>Fastest web server I've used</p>
+                    </div>
+                    <div class="section">
+                        <a href="https://nodejs.org/en/" target="_blank">Node.js</a>
+                        <p>Until I find motivation to learn actix</p>
+                    </div>
+                    <div class="section">
+                        <a href="https://prettier.io/" target="_blank">Prettier</a>
+                        <p>Customisable, simple code formatter</p>
+                    </div>
+                    <div class="section">
+                        <a href="https://vercel.com/" target="_blank">Vercel</a>
+                        <p>I just love it-</p>
+                    </div>
+                </div>
+            </div>
+            <div class="category" target="_blank">
+                <h2 class="section-head" target="_blank">Gear</h3>
+                <div class="section-list" target="_blank">
+                    <div class="section">
+                        <a href="https://browser.geekbench.com/v4/cpu/15055681/" target="_blank">HP Laptop 14</a>
+                        <p>Dual core i3 @2.4ghz</p>
+                    </div>
+                    <div class="section">
+                        <a href="https://www.amazon.com/HP-EliteDisplay-21-5-inch-Monitor-computer/dp/B01B9K4CQW" target="_blank">HP EliteDisplay E222</a>
+                        <p>Good monitor for the price</p>
+                    </div>
+                    <div class="section">
+                        <a href="https://www.amazon.com/Logitech-Wireless-Desktop-Keyboard-Mouse/dp/B07NHN6B8T" target="_blank">K330 Wireless</a>
+                        <p>I type at 120wpm</p>
+                    </div>
+                    <div class="section">
+                        <a href="https://www.bestbuy.com/site/logitech-m325-wireless-optical-mouse-silver/2577677.p" target="_blank">M325 Wireless</a>
+                        <p>Small and handy mouse</p>
+                    </div>
+                    <div class="section">
+                        <a href="https://www.apple.com/shop/product/MMTN2AM/A/earpods-with-lightning-connector" target="_blank">EarPods</a>
+                        <p>Came with my iPhone, been using for a while</p>
+                    </div>
+                    <div class="section">
+                        <a href="https://www.amazon.com/Apple-iPhone-GSM-Unlocked-64GB/dp/B0775MV9K2" target="_blank">iPhone 8</a>
+                        <p>Mainly for personal use</p>
+                    </div>
+                    <div class="section">
+                        <a href="https://www.xbox.com/en-US/consoles/xbox-one-s" target="_blank">Xbox One S</a>
+                        <p>Gaming with friends</p>
+                    </div>
+                    <div class="section">
+                        <a href="https://www.ebay.com/p/235173950" target="_blank">iPad 5th Gen</a>
+                        <p>For general use</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</template>
+
+<style>
+    main {
+        display: flex;
+        justify-content: center;
+        margin: 50px 0;
+        color: var(--main);
+    }
+
+    div {
+        width: 70vw;
+    }
+
+    p.desc {
+        width: 400px;
+        margin-top: 20px;
+    }
+
+    div.intro {
+        margin-bottom: 70px;
+    }
+
+    div.category { 
+        margin: 50px 0;
+    }
+
+    div.section-list {
+        display: flex;
+        flex-direction: column;
+        margin: 20px 0;
+    }
+
+    div.section {
+        display: flex;
+        align-items: center;
+        margin: 5px 0;
+    }
+
+    div.section > p {
+        color: var(--dark);
+        margin-left: 10px;
+    }
+</style>
+</AbellComponent>

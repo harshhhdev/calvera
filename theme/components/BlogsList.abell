@@ -1,7 +1,7 @@
 <AbellComponent>
 {{ const { contentArray } = props }}
 <template>
-  <main>
+  <main id="blog">
     <div>
       {{
         contentArray.map(meta => /* html */`

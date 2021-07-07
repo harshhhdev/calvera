@@ -2,11 +2,11 @@
 <template>
     <nav>
         <main>
-            <div>
+            <div class="nav-name">
                 <pre>> ~/harshsingh/</pre>
             </div>
             <div class="nav-links">
-                <a href='#blog'>Blog</a>
+                <a href='/#blog'>Blog</a>
                 <a href='/uses'>Uses</a>
                 <a href='/talks'>Talks</a>
                 <i data-feather="moon"></i>
@@ -33,6 +33,11 @@ pre {
     font-family: 'JetBrains Mono', monospace !important;
     color: var(--main);
     font-size: 18px;
+}
+
+.nav-name {
+    display: flex;
+    align-items: center;
 }
 
 .nav-links {
