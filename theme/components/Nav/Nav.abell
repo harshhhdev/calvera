@@ -1,0 +1,58 @@
+<AbellComponent>
+<template>
+    <nav>
+        <main>
+            <div>
+                <pre>> ~/harshsingh/</pre>
+            </div>
+            <div class="nav-links">
+                <a href='#blog'>Blog</a>
+                <a href='/uses'>Uses</a>
+                <a href='/talks'>Talks</a>
+                <i data-feather="moon"></i>
+            </div>
+        </main>
+    </nav>
+</template>
+
+<style>
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    padding: 30px;
+    width: 70vw;
+    border-bottom: 1px solid var(--dark);
+    display: flex;
+    justify-content: space-between;
+}
+
+pre {
+    font-family: 'JetBrains Mono', monospace !important;
+    color: var(--main);
+    font-size: 18px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links > a {
+    margin: 0 10px;
+    font-size: 18px;
+}
+
+svg {
+    color: var(--main);
+    margin: 0 10px;
+}
+
+svg:hover {
+    color: var(--white);
+    cursor: pointer;
+}
+</style>
+</AbellComponent>
