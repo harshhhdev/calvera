@@ -1,38 +1,53 @@
 <AbellComponent>
 {{ const { contentArray } = props }}
 <template>
-  <section class="container" id="blogs">
-    <h2>Blogs</h2>
-    {{
-      contentArray.map(meta => /* html */`
-      <article>
-        <h3><a href="${meta.$path}/">${meta.title}</a></h3>
-        <p class="createdat-date">${meta.$createdAt.toDateString()}</p>
-        <p class="description">${meta.description}</p>
-      </article>
-      `);
-    }}
-  </section>
+  <main>
+    <div>
+      {{
+        contentArray.map(meta => /* html */`
+        <article>
+          <h3><a href="${meta.$path}/">${meta.title}</a></h3>
+          <p class="createdat-date">Published on ${meta.$createdAt.toDateString()}</p>
+          <p class="description">${meta.description}</p>
+          <a class="read" href="${meta.$path}/">Read More</a>
+        </article>
+        `);
+      }}
+    </div>
+  </main>
 </template>
 
 <style>
-  article {
-    padding: 8px 0px;
-    margin: 13px 0px;
-  }
+main {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
 
-  article h3 {
-    margin: 5px 0px;
-    font-size: 1.4rem;
-  }
+main > div {
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+}
 
-  article .createdat-date {
-    font-size: 0.9rem;
-    margin: 10px 0px;
-  }
+div > article {
+  margin: 30px 0;
+}
 
-  article .description {
-    margin: 0px 0px;
-  }
+article {
+  color: var(--dark);
+}
+
+h3 {
+  font-size: 24px;
+}
+
+p {
+  margin: 10px 0;
+}
+
+a.read {
+  color: var(--secondary);
+}
 </style>
 </AbellComponent>

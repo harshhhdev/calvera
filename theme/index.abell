@@ -15,7 +15,6 @@
   <SEO />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" href="{{ $root }}/static-assets/images/favicon.ico"/>
   <link rel="stylesheet" href="{{ $root }}/static-assets/styles.css"/>
   
   <title>{{ globalMeta.title }}</title>
@@ -23,11 +22,6 @@
 <body>
   <main>
     <Profile />
-    <!-- List of blogs -->
-    {{ 
-      // Uncomment next line to see all the blog data in terminal
-      // console.log(Abell) 
-    }}
     <BlogsList props={contentArray} />
   </main>
   <Footer />

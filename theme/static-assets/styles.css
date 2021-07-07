@@ -1,5 +1,5 @@
 :root {
-  --dark: #282B2D;
+  --dark: #515053;
   --main: #A9A9B3;
   --primary: #252627;
   --white: #f6f6f6;
@@ -14,7 +14,7 @@
 }
 
 body {
-  background: var(--dark);
+  background: #282B2D;
 }
 
 img {
