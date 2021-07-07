@@ -1,0 +1,99 @@
+<AbellComponent>
+<template>
+    <main>
+        <div class="img-cont">
+            <img src="https://media.discordapp.net/attachments/790615944748597278/862134841377554462/image.png" />
+            <div class="socials">
+                <a href="https://instagram.com/harshh.singh_/" target="_blank">
+                    <i data-feather="instagram"></i>
+                </a>
+                <a href="https://twitter.com/harshhhdev/" target="_blank">
+                    <i data-feather="twitter"></i>
+                </a>
+                <a href="https://github.com/harshhhdev/" target="_blank">
+                    <i data-feather="github"></i>
+                </a>
+            </div>
+        </div>
+        <div class="profile-info">
+            <h1>Harsh Singh</h1>
+            <p>Hi, welcome! Edit the abell.config.js to get started using Calvera!</p>
+            <a href="mailto:hi.harsh@pm.me">hi.harsh@pm.me</a>
+        </div>
+    </main>
+</template>
+
+<style>
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
+img {
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+}
+
+.img-cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.socials {
+    margin-top: 20px;
+}
+
+.socials a {
+    margin: 0 10px;
+}
+
+.profile-info {
+    margin-left: 50px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.profile-info > h1 {
+    color: var(--white);
+    font-size: 40px;
+}
+
+.profile-info > p {
+    color: var(--main);
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+.profile-info > a {
+    color: var(--secondary);
+    position: relative;
+    text-decoration: none;
+    width: fit-content;
+}
+
+.profile-info > a:before {
+    content: "";
+    width: 0;
+    height: 0.1em;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: var(--secondary);
+    transition: 0.3s all;
+}
+
+.profile-info > a:hover:before {
+    width: 100%;
+    left: 0;
+    background: var(--secondary);
+}
+</style>
+</AbellComponent>
