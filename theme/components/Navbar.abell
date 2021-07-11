@@ -14,16 +14,6 @@
     </div>
   </nav>
 </template>
-
-<!--
-  1. Styles are scoped by default.
-  You can use 'global' to remove the scope
-
-  2. 'inlined' attribute on script or style, adds the content to the html 
-  inside style or script tag.
-
-  With this you can load critical style/scripts faster.
--->
 <style inlined>
   nav {
     padding: 0px 150px;

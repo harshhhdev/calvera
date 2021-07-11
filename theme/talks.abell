@@ -9,7 +9,7 @@
   const Scripts = require('./components/Scripts.abell')
 
   const Nav = require('./components/Nav/Nav.abell')
-  const Uses = require('./components/Uses/Uses.abell')
+  const Talks = require('./components/Talks/Talks.abell')
 }}
 <html lang="en">
 <head>
@@ -18,12 +18,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="{{ $root }}/static-assets/styles.css"/>
   
-  <title>{{ globalMeta.title }} | Uses</title>
+  <title>{{ globalMeta.title }} | Talks</title>
 </head>
 <body>
   <main>
     <Nav />
-    <Uses />
+    <Talks />
   </main>
   <Footer />
   <Scripts />

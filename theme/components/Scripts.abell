@@ -1,8 +1,13 @@
 <AbellComponent>
 <template>
     <script src="https://unpkg.com/feather-icons@4.28.0/dist/feather.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.0/highlight.min.js"></script>
+    <script src="{{props.$root}}/static-assets/DarkMode.js"></script>
+</script>
     <script>
       feather.replace()
+      hljs.highlightAll()
+      SetTheme()
     </script>
 </template>
 </AbellComponent>

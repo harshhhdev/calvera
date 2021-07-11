@@ -4,6 +4,7 @@ module.exports = {
   outputPath: 'dist', // On npm run build, website is created in 'dist' directory.
   globalMeta: {
     title: 'Harsh Singh',
-    shortName: 'Abell'
+    shortName: 'Abell',
+    domain: 'https://harshhhdev.github.io/calvera'
   }
 };

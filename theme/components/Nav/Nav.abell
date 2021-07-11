@@ -9,7 +9,8 @@
                 <a href='/#blog'>Blog</a>
                 <a href='/uses'>Uses</a>
                 <a href='/talks'>Talks</a>
-                <i data-feather="moon"></i>
+                <i data-feather="moon" onclick="ToggleTheme()"></i>
+                <i data-feather="sun" onclick="ToggleTheme()"></i>
             </div>
         </main>
     </nav>

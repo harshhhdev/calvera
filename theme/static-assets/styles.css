@@ -1,9 +1,21 @@
-:root {
+body {
   --dark: #515053;
   --main: #A9A9B3;
-  --primary: #252627;
   --white: #f6f6f6;
   --secondary: #54BCE1;
+  --codeblocK: #282C34;
+  --codeblock-selection: #ffffff20;
+  background: #282B2D;
+}
+
+body.light {
+  --dark: #ADADB7;
+  --main: #171208;
+  --white: #2D97BC;
+  --secondary: #2D97BC;
+  --codeblocK: #e2e2e2;
+  --codeblock-selection: #35a6f740;
+  background: #FFFEFE;
 }
 
 * {
@@ -12,10 +24,6 @@
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
-}
-
-body {
-  background: #282B2D;
 }
 
 img {
@@ -32,7 +40,7 @@ a:hover {
 }
 
 ::selection {
-  background-color: #35a6f740
+  background-color: #35a6f740;
 }
 
 body::-webkit-scrollbar {
@@ -49,4 +57,78 @@ body::-webkit-scrollbar-thumb {
 
 body::-webkit-scrollbar-thumb:hover {
   background: var(--main);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.blog {
+  width: 50vw;
+  margin: 100px 0;
+  color: var(--main);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.blog * {
+  width: 100%;
+}
+
+code, pre, span {
+  font-family: "JetBrains Mono", monospace;
+  border-radius: 5px;
+}
+
+p > code {
+  background: var(--dark);
+  border-radius: 0px;
+}
+
+.blog > pre {
+  margin: 20px 0;
+  width: 55vw;
+}
+
+.blog > h1 {
+  margin: 30px 0;
+}
+
+.blog p {
+  margin: 5px 0;
+}
+
+p > a {
+  color: var(--secondary) !important;
+  position: relative;
+  text-decoration: none;
+  width: fit-content;
+}
+
+p > a:before {
+  content: "";
+  width: 0;
+  height: 0.1em;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: var(--secondary);
+  transition: 0.3s all;
+}
+
+p > a:hover:before {
+  width: 100%;
+  left: 0;
+  background: var(--secondary);
+}
+
+code::selection, span::selection {
+  background-color: var(--codeblock-selection);
+}
+
+code, span {
+  background: var(--codeblocK) !important;
 }
