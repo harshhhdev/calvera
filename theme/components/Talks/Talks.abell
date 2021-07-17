@@ -1,45 +1,31 @@
 <AbellComponent>
+{{ const talks = props.globalMeta.talks }}
 <template>
     <main>
         <div>
-            <div class="talk">
-                <h1>Talk title</h1>
-                <h2>Conference 2020</h2>
-                <div class="details">
-                    <div class="detail">
-                        <i data-feather="map-pin"></i>
-                        New Delhi
+            {{
+                talks.map(meta => /* html */`
+                    <div class="talk">
+                        <h1>${ meta.name }</h1>
+                        <h2>${ meta.conf }</h2>
+                        <div class="details">
+                            <div class="detail">
+                                <i data-feather="map-pin"></i>
+                                ${ meta.location }
+                            </div>
+                            <div class="detail">
+                                <i data-feather="calendar"></i>
+                                ${ meta.date }
+                            </div>
+                            <div class="detail">
+                                <i data-feather="mic"></i>
+                                ${ meta.role }
+                            </div>
+                        </div>
+                        <a href="https://${ meta.link }" target="_blank">${ meta.link }</a>
                     </div>
-                    <div class="detail">
-                        <i data-feather="calendar"></i>
-                        26 July 2006
-                    </div>
-                    <div class="detail">
-                        <i data-feather="mic"></i>
-                        Main Speaker
-                    </div>
-                </div>
-                <a href="https://reactindia.io/" target="_blank">reactindia.io</a>
-            </div>
-            <div class="talk">
-                <h1>Your Talk</h1>
-                <h2>Prisma Day</h2>
-                <div class="details">
-                    <div class="detail">
-                        <i data-feather="map-pin"></i>
-                        Berlin
-                    </div>
-                    <div class="detail">
-                        <i data-feather="calendar"></i>
-                        15 September 2014
-                    </div>
-                    <div class="detail">
-                        <i data-feather="mic"></i>
-                        Main Speaker
-                    </div>
-                </div>
-                <a href="https://prisma.io/day" target="_blank">prisma.io/day</a>
-            </div>
+                `);
+            }}
         </div>
     </main>
 </template>

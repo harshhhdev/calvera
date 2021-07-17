@@ -13,9 +13,7 @@
 }}
 <html lang="en">
 <head>
-  <SEO />
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <SEO props={$root} />
   <link rel="stylesheet" href="{{ $root }}/static-assets/styles.css"/>
   
   <title>{{ globalMeta.title }}</title>
@@ -23,7 +21,7 @@
 <body>
   <main>
     <Nav />
-    <Profile />
+    <Profile props={globalMeta} />
     <BlogsList props={contentArray} />
   </main>
   <Footer />

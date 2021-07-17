@@ -2,23 +2,23 @@
 <template>
     <main>
         <div class="img-cont">
-            <img src="https://media.discordapp.net/attachments/716483368795111436/862177492889763850/210131841_527897364921924_1561536371299956248_n.png" />
+            <img src="https://media.discordapp.net/attachments/863926316356337684/865780192907100191/210131841_527897364921924_1561536371299956248_n.png" />
             <div class="socials">
-                <a href="https://www.linkedin.com/in/harsh-singh-5ba6b31b8/" target="_blank">
+                <a href="{{ props.globalMeta.linkedin }}" target="_blank">
                     <i data-feather="linkedin"></i>
                 </a>
-                <a href="https://twitter.com/harshhhdev/" target="_blank">
+                <a href="https://twitter.com/{{ props.globalMeta.twitter }}/" target="_blank">
                     <i data-feather="twitter"></i>
                 </a>
-                <a href="https://github.com/harshhhdev/" target="_blank">
+                <a href="https://github.com/{{ props.globalMeta.github }}/" target="_blank">
                     <i data-feather="github"></i>
                 </a>
             </div>
         </div>
         <div class="profile-info">
-            <h1>Harsh Singh</h1>
-            <p>Hi, welcome! Edit the abell.config.js to get started using Calvera!</p>
-            <a href="mailto:hi.harsh@pm.me">hi.harsh@pm.me</a>
+            <h1>{{ props.globalMeta.title }}</h1>
+            <p>{{ props.globalMeta.description }}</p>
+            <a href="mailto:{{props.globalMeta.email}}">{{ props.globalMeta.email }}</a>
         </div>
     </main>
 </template>

@@ -2,9 +2,6 @@
 <template>
     <link href="https://fonts.googleapis.com/css2?family=Lexend&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
-    <link
-        rel="icon"
-        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👋</text></svg>"
-    />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.0/styles/atom-one-dark.css" />
+    <link rel="icon" href="{{ props.$root }}/static-assets/images/favicon.ico"/>
+</template>
 </AbellComponent>
