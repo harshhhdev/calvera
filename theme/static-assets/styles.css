@@ -1,25 +1,25 @@
 body {
   --dark: #515053;
-  --main: #A9A9B3;
+  --main: #a9a9b3;
   --white: #f6f6f6;
-  --secondary: #54BCE1;
-  --codeblocK: #282C34;
+  --secondary: #54bce1;
+  --codeblocK: #282c34;
   --codeblock-selection: #ffffff20;
-  background: #282B2D;
+  background: #282b2d;
 }
 
 body.light {
-  --dark: #ADADB7;
+  --dark: #adadb7;
   --main: #171208;
-  --white: #2D97BC;
-  --secondary: #2D97BC;
+  --white: #2d97bc;
+  --secondary: #2d97bc;
   --codeblocK: #e2e2e2;
   --codeblock-selection: #35a6f740;
-  background: #FFFEFE;
+  background: #fffefe;
 }
 
 * {
-  font-family: "Lexend", sans-serif;
+  font-family: 'Lexend', sans-serif;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -78,8 +78,10 @@ body::-webkit-scrollbar-thumb:hover {
   width: 100%;
 }
 
-code, pre, span {
-  font-family: "JetBrains Mono", monospace;
+code,
+pre,
+span {
+  font-family: 'JetBrains Mono', monospace;
   border-radius: 5px;
 }
 
@@ -91,13 +93,30 @@ p > code {
 .blog > pre {
   margin: 20px 0;
   width: 55vw;
+  border: 2px solid white;
 }
 
 .blog > h1 {
   margin: 30px 0;
 }
 
+.blog > h2 {
+  margin: 20px 0;
+}
+
+.blog > h3 {
+  margin: 10px 0;
+}
+
 .blog p {
+  margin: 5px 0;
+}
+
+.blog > ul {
+  margin: 10px 0;
+}
+
+.blog li {
   margin: 5px 0;
 }
 
@@ -109,7 +128,7 @@ p > a {
 }
 
 p > a:before {
-  content: "";
+  content: '';
   width: 0;
   height: 0.1em;
   position: absolute;
@@ -125,10 +144,31 @@ p > a:hover:before {
   background: var(--secondary);
 }
 
-code::selection, span::selection {
+code::selection,
+span::selection {
   background-color: var(--codeblock-selection);
 }
 
-code, span {
-  background: var(--codeblocK) !important;
+.blog img {
+  border-radius: 1%;
+  border: 2px solid white;
+}
+
+table {
+  color: var(--white);
+  background: var(--codeblocK);
+  border-radius: 5px;
+  padding: 20px;
+  width: fit-content !important;
+  border: 2px solid white;
+}
+
+table th {
+  padding-bottom: 25px;
+}
+
+table td {
+  white-space: nowrap;
+  text-align: center;
+  vertical-align: middle;
 }

@@ -2,13 +2,14 @@
 
 You can either Deploy from a GitHub Repository or Deploy folder manually.
 
-## Deploy with GitHub
+## Deploy with [GitHub Pages](https://pages.github.com/)
 
 ### 1. Create GitHub Repository
 
 - Create a GitHub repository on your GitHub account
 - Push the content from this project to your repository.
-```
+
+```bash
 git init
 git remote add origin <your-github-project-url>
 git add .

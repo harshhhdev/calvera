@@ -2,21 +2,21 @@
 # yarn lockfile v1
 
 
-abell-renderer@^0.3.1:
-  version "0.3.3"
-  resolved "https://registry.yarnpkg.com/abell-renderer/-/abell-renderer-0.3.3.tgz#c0f7ffc0bd188959af735bdafcbb3725eb7ded30"
-  integrity sha512-n+tRglvkyCjJAZPtcEFUW0wGjqRDEcGxMGauyJcNBDX31O+LdI8gCToMGslxjOJYciDz1p+2MOWxAggu1QYGVg==
+abell-renderer@^0.4.2:
+  version "0.4.2"
+  resolved "https://registry.yarnpkg.com/abell-renderer/-/abell-renderer-0.4.2.tgz#adff0ff624e11f421e864404642c18e651f755eb"
+  integrity sha512-RvzlcdWwIU8H/IxNS6QOGo9BgbTbaPI8P/r6O/2nnks6PIkDlf+xfQkICjKSE9U9PcijKCsom4SO8jzeNbBLKQ==
   dependencies:
     acorn "^8.0.1"
     postcss-selector-parser "^6.0.2"
     stylis "^4.0.2"
 
-abell@^0.6.2:
-  version "0.6.5"
-  resolved "https://registry.yarnpkg.com/abell/-/abell-0.6.5.tgz#f52c1f0eed1985f125ee6e958cd0cc07a170b916"
-  integrity sha512-vNHaSQ9Rnxx4Ezbayo8aVsw2jX/odVBfY8GcRYzVfZcQB/te3GCPhn+in5xzX95G0med5m0MwgvLJux0tLi4Bg==
+abell@^0.10.3:
+  version "0.10.3"
+  resolved "https://registry.yarnpkg.com/abell/-/abell-0.10.3.tgz#03c467b6218c28e4364e3019bfa83efc5ebcc588"
+  integrity sha512-U9isSAOREXK8XTWHnG+HmKfH0lutL2EZ49ffG61a3OXC2pYzQ8dVO200uiWHxa243HtAiav6eEBhX1mBYlK1vg==
   dependencies:
-    abell-renderer "^0.3.1"
+    abell-renderer "^0.4.2"
     chokidar "^3.4.0"
     commander "^5.0.0"
     remarkable "^2.0.0"
