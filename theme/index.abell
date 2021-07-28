@@ -15,12 +15,13 @@
 <head>
   <SEO props={$root} />
   <link rel="stylesheet" href="{{ $root }}/static-assets/styles.css"/>
-  
+  <link rel="stylesheet" href="{{ $root }}/static-assets/index.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>{{ globalMeta.title }}</title>
 </head>
 <body>
   <main>
-    <Nav />
     <Profile props={globalMeta} />
     <BlogsList props={contentArray} />
   </main>

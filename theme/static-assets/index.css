@@ -1,0 +1,14 @@
+@media (max-width: 414px) {
+  main.profile {
+    flex-direction: column;
+  }
+
+  div.img-cont {
+    justify-content: center;
+    width: 250px;
+  }
+
+  div.profile-info {
+    margin: 50px 0 0 0 !important;
+  }
+}

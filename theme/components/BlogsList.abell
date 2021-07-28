@@ -28,6 +28,7 @@ main > div {
   display: flex;
   flex-direction: column;
   width: 50vw;
+  min-width: 300px;
 }
 
 div > article {

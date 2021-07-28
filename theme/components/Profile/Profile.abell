@@ -1,6 +1,6 @@
 <AbellComponent>
 <template>
-    <main>
+    <main class="profile">
         <div class="img-cont">
             <img src="https://media.discordapp.net/attachments/863926316356337684/865780192907100191/210131841_527897364921924_1561536371299956248_n.png" />
             <div class="socials">
