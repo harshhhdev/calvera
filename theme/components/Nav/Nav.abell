@@ -12,6 +12,11 @@
                 <i data-feather="moon" onclick="ToggleTheme()"></i>
                 <i data-feather="sun" onclick="ToggleTheme()"></i>
             </div>
+            <div class="hamburger">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </div>
         </main>
     </nav>
 </template>
