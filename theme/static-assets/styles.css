@@ -6,6 +6,9 @@ body {
   --codeblocK: #282c34;
   --codeblock-selection: #ffffff20;
   background: #282b2d;
+
+  position: relative;
+  overflow-x: hidden;
 }
 
 body.light {
