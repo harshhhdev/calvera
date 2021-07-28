@@ -22,6 +22,7 @@
 </head>
 <body>
   <main>
+    <Nav />
     <Profile props={globalMeta} />
     <BlogsList props={contentArray} />
   </main>

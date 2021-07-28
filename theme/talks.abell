@@ -23,7 +23,7 @@
 </head>
 <body>
   <main>
-    <!-- <Nav /> -->
+    <Nav />
     <Talks props={globalMeta} />
   </main>
   <Footer />

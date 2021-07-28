@@ -22,6 +22,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/styles/atom-one-dark.min.css" />
 </head>
 <body>
+  <Nav />
   <main class="container">
   <Meta props={meta} />
   <div class="blog">
