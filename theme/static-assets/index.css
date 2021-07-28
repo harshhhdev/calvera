@@ -11,4 +11,12 @@
   div.profile-info {
     margin: 50px 0 0 0 !important;
   }
+
+  .blog {
+    width: 80vw !important;
+  }
+
+  .blog > pre {
+    width: 85vw !important;
+  }
 }
