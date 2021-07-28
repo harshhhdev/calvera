@@ -168,7 +168,7 @@ module.exports = {
         },
         {
           name: 'Apple EarPods',
-          description: 'Came with my iPhone, been using for a while',
+          description: 'Came with my iPhone',
           link: 'apple.com/shop/product/MMTN2AM/A/earpods-with-lightning-connector',
         },
         {

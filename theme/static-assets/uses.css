@@ -1,0 +1,9 @@
+@media (max-width: 414px) {
+  div.section {
+    font-size: 12px;
+  }
+
+  div.section > p {
+    margin-left: 5px !important;
+  }
+}

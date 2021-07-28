@@ -1,99 +1,103 @@
 <AbellComponent>
-{{ 
-const software = props.globalMeta.uses.software 
-const tech = props.globalMeta.uses.tech 
-const gear = props.globalMeta.uses.gear 
-}}
-<template>
+  {{ 
+    const software = props.globalMeta.uses.software 
+    const tech = props.globalMeta.uses.tech 
+    const gear = props.globalMeta.uses.gear 
+  }}
+  <template>
     <main>
-        <div>
-            <div class="intro">
-                <h1>What I use.</h1>
-                <p class="desc">Here's a small overview of my setup. From software, to hardware -- this is how I make my magic happen</p>
+      <div>
+        <div class="intro">
+          <h1>What I use.</h1>
+            <p class="desc">Here's a small overview of my setup. From software, to hardware -- this is how I make my magic happen</p>
+          </div>
+          <div class="category">
+            <h2 class="section-head">Software</h3>
+            <div class="section-list">
+            {{
+              software.map(meta => /* html */`
+                <div class="section">
+                  <a href="https://${meta.link}/">${ meta.name }</a>
+                    <p>${meta.description}</p>
+                  </div>
+              `);
+            }}
             </div>
-            <div class="category">
-                <h2 class="section-head">Software</h3>
-                <div class="section-list">
-                {{
-                    software.map(meta => /* html */`
-                    <div class="section">
-                        <a href="https://${meta.link}/">${ meta.name }</a>
-                        <p>${meta.description}</p>
-                    </div>
-                    `);
-                }}
-                </div>
             </div>
-            <div class="category" target="_blank">
+              <div class="category" target="_blank">
                 <h2 class="section-head" target="_blank">Tech</h3>
                 <div class="section-list" target="_blank">
                 {{
-                    tech.map(meta => /* html */`
+                  tech.map(meta => /* html */`
                     <div class="section">
-                        <a href="https://${meta.link}/">${ meta.name }</a>
-                        <p>${meta.description}</p>
+                      <a href="https://${meta.link}/">${ meta.name }</a>
+                      <p>${meta.description}</p>
                     </div>
-                    `);
+                  `);
                 }}
                 </div>
-            </div>
+              </div>
             <div class="category" target="_blank">
-                <h2 class="section-head" target="_blank">Gear</h3>
-                <div class="section-list" target="_blank">
-                {{
-                    gear.map(meta => /* html */`
-                    <div class="section">
-                        <a href="https://${meta.link}/">${ meta.name }</a>
-                        <p>${meta.description}</p>
-                    </div>
-                    `);
-                }}
-                </div>
-            </div>
-        </div>
-    </main>
-</template>
-
-<style>
-    main {
-        display: flex;
-        justify-content: center;
-        margin: 50px 0;
-        color: var(--main);
-    }
-
-    div {
-        width: 70vw;
-    }
-
-    p.desc {
-        width: 400px;
-        margin-top: 20px;
-    }
-
-    div.intro {
-        margin-bottom: 70px;
-    }
-
-    div.category { 
-        margin: 50px 0;
-    }
-
-    div.section-list {
-        display: flex;
-        flex-direction: column;
-        margin: 20px 0;
-    }
-
-    div.section {
-        display: flex;
-        align-items: center;
-        margin: 5px 0;
-    }
-
-    div.section > p {
-        color: var(--dark);
-        margin-left: 10px;
-    }
-</style>
+              <h2 class="section-head" target="_blank">Gear</h3>
+              <div class="section-list" target="_blank">
+              {{
+                gear.map(meta => /* html */`
+                      <div class="section">
+                          <a href="https://${meta.link}/">${ meta.name }</a>
+                          <p>${meta.description}</p>
+                      </div>
+                      `);
+                  }}
+                  </div>
+              </div>
+          </div>
+      </main>
+  </template>
+  
+  <style>
+      main {
+          display: flex;
+          justify-content: center;
+          margin: 50px 0;
+          color: var(--main);
+      }
+  
+      div {
+          width: 70vw;
+          max-width: 800px;
+          min-width: 280px;
+      }
+  
+      p.desc {
+          max-width: 400px;
+          width: 50vw;
+          min-width: 250px;
+          margin-top: 20px;
+      }
+  
+      div.intro {
+          margin-bottom: 70px;
+      }
+  
+      div.category { 
+          margin: 50px 0;
+      }
+  
+      div.section-list {
+          display: flex;
+          flex-direction: column;
+          margin: 20px 0;
+      }
+  
+      div.section {
+          display: flex;
+          align-items: center;
+          margin: 5px 0;
+      }
+  
+      div.section > p {
+          color: var(--dark);
+          margin-left: 10px;
+      }
+  </style>
 </AbellComponent>
