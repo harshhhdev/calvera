@@ -51,3 +51,16 @@ In your jobs, below the steps, we can start setting up our action
 
 By default, all Abell projects use dist for their output directory, though this can be customised in the [Abell config](https://abelljs.org/guide/api-reference/#abellprograminfo-ltobjectgt).
 
+Now commit this file to your master branch.
+
+# Setting Up GitHub Pages
+
+Now that we're done setting up our workflow, let's make sure GitHub pages works properly. 
+
+Go into your repo > settings > pages.
+
+Select gh-pages as your branch, and hit save.
+
+Wait for the action to run, and your website should now be live!
+
+Now, when you commit to your master branch, the files will automatically be built and deployed to your GitHub pages. Cool!

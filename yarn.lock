@@ -2,7 +2,7 @@
 # yarn lockfile v1
 
 
-abell-renderer@^0.4.0:
+abell-renderer@^0.4.2:
   version "0.4.2"
   resolved "https://registry.yarnpkg.com/abell-renderer/-/abell-renderer-0.4.2.tgz#adff0ff624e11f421e864404642c18e651f755eb"
   integrity sha512-RvzlcdWwIU8H/IxNS6QOGo9BgbTbaPI8P/r6O/2nnks6PIkDlf+xfQkICjKSE9U9PcijKCsom4SO8jzeNbBLKQ==
@@ -11,12 +11,12 @@ abell-renderer@^0.4.0:
     postcss-selector-parser "^6.0.2"
     stylis "^4.0.2"
 
-abell@^0.8.0:
-  version "0.8.0"
-  resolved "https://registry.yarnpkg.com/abell/-/abell-0.8.0.tgz#0b7a92773529b5ac4b1d015a01ba55b12bc46754"
-  integrity sha512-gvQGpNGmBIclOTLA2UpJ8HFLXMklOfWyhaMB04DXt5G1TE9lCKLG8PZhjV4RY3HJpA25hxTkZOF6eTVSsylZcA==
+abell@^0.10.3:
+  version "0.10.3"
+  resolved "https://registry.yarnpkg.com/abell/-/abell-0.10.3.tgz#03c467b6218c28e4364e3019bfa83efc5ebcc588"
+  integrity sha512-U9isSAOREXK8XTWHnG+HmKfH0lutL2EZ49ffG61a3OXC2pYzQ8dVO200uiWHxa243HtAiav6eEBhX1mBYlK1vg==
   dependencies:
-    abell-renderer "^0.4.0"
+    abell-renderer "^0.4.2"
     chokidar "^3.4.0"
     commander "^5.0.0"
     remarkable "^2.0.0"
