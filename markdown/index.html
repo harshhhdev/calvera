@@ -1,0 +1,211 @@
+
+
+<html lang="en">
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend&display=swap|Lexend:100,200,300,400,500,600,700,800,900" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <link rel="icon" href="../static-assets/images/favicon.ico"/>
+  <link rel="stylesheet" href="../static-assets/styles.css"/>
+    <link rel="stylesheet" href="../static-assets/index.css"/>
+  
+  <title>Markdown Syntax Guide</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/styles/atom-one-dark.min.css" />
+
+<link rel="stylesheet" href="../bundled-css/main.abell.css"/>
+</head>
+<body>
+  <nav data-abell-cQsIJt>
+        <main data-abell-cQsIJt>
+            <div class="nav-name" data-abell-cQsIJt>
+                <pre data-abell-cQsIJt>> ~/harshsingh/</pre>
+            </div>
+            <div class="nav-links" data-abell-cQsIJt>
+                <a href='/#blog' data-abell-cQsIJt>Blog</a>
+                <a href='/uses' data-abell-cQsIJt>Uses</a>
+                <a href='/talks' data-abell-cQsIJt>Talks</a>
+                <i data-feather="moon" onclick="ToggleTheme()" data-abell-cQsIJt></i>
+                <i data-feather="sun" onclick="ToggleTheme()" data-abell-cQsIJt></i>
+            </div>
+            <div class="hamburger" data-abell-cQsIJt>
+              <span class="bar" data-abell-cQsIJt></span>
+              <span class="bar" data-abell-cQsIJt></span>
+              <span class="bar" data-abell-cQsIJt></span>
+            </div>
+        </main>
+    </nav>
+  <main class="container">
+  <div data-abell-hxSZRJ>
+        <h1 data-abell-hxSZRJ>Markdown Syntax Guide</h1>
+        <p data-abell-hxSZRJ>Published on Tue Jul 06 2021</p>
+    </div>
+  <div class="blog">
+    <h1 id="what-is-markdown">What is Markdown?</h1>
+<p>Before we get into the syntax, it's important to understand... what is markdown?</p>
+<p>As quoted from <a href="https://www.markdownguide.org/getting-started">Markdown Guide</a>, &quot;Markdown is a lightweight markup language that you can use to add formatting elements to plaintext text documents.&quot;</p>
+<p>This blog runs on <a href="https://en.wikipedia.org/wiki/Markdown">Markdown</a> files, making it easy to write new posts.</p>
+<h1 id="headings">Headings</h1>
+<p>There are 6 different headings in <a href="https://en.wikipedia.org/wiki/Markdown">Markdown</a>, each level is represented by a hash</p>
+<pre><code class="language-md"># Hello
+## Hello
+### Hello
+#### Hello
+##### Hello
+###### Hello
+</code></pre>
+<p>This produces the following HTML:</p>
+<pre><code class="language-html">&lt;h1&gt;Hello&lt;/h1&gt;
+&lt;h2&gt;Hello&lt;/h2&gt;
+&lt;h3&gt;Hello&lt;/h3&gt;
+&lt;h4&gt;Hello&lt;/h4&gt;
+&lt;h5&gt;Hello&lt;/h5&gt;
+&lt;h6&gt;Hello&lt;/h6&gt;
+</code></pre>
+<h1 id="links">Links</h1>
+<pre><code class="language-md">[GitHub](https://github.com/harshhhdev/)
+</code></pre>
+<p>This produces the following HTML:</p>
+<pre><code class="language-html">&lt;a href=&quot;https://github.com/harshhhdev/&quot;&gt;GitHub&lt;/a&gt;
+</code></pre>
+<h3 id="tooltips">Tooltips</h3>
+<pre><code class="language-md">[GitHub](https://github.com/harshhhdev/ &quot;Follow me on GitHub!&quot;)
+</code></pre>
+<p>Produces the following HTML:</p>
+<pre><code class="language-html">&lt;a href=&quot;https://github.com/harshhhdev/&quot; title=&quot;Follow me on GitHub!&quot;&gt;GitHub&lt;/a&gt;
+</code></pre>
+<p>and produces the following output:</p>
+<p><a href="https://github.com/harshhhdev/" title="Follow me on GitHub!">GitHub</a></p>
+<h1 id="lists">Lists</h1>
+<pre><code class="language-md"> - Item one
+ - Item two
+ - Item three
+</code></pre>
+<pre><code class="language-html">&lt;ul&gt;
+    &lt;li&gt;Item one&lt;/li&gt;
+    &lt;li&gt;Item two&lt;/li&gt;
+    &lt;li&gt;Item three&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+<h1 id="text-emphasis">Text Emphasis</h1>
+<h3 id="bold">Bold</h3>
+<pre><code class="language-md">**Bold text**
+</code></pre>
+<pre><code class="language-html">&lt;p&gt;
+    &lt;strong&gt;Bold text&lt;/strong&gt;
+&lt;/p&gt;
+</code></pre>
+<h3 id="italic">Italic</h3>
+<pre><code class="language-md">*Italic text*
+</code></pre>
+<pre><code class="language-html">&lt;p&gt;
+    &lt;em&gt;Italic text&lt;/em&gt;
+&lt;/p&gt;
+</code></pre>
+<h3 id="strikethrough">Strikethrough</h3>
+<pre><code class="language-md">~~Strikethrough Text~~
+</code></pre>
+<pre><code class="language-html">&lt;p&gt;
+    &lt;del&gt;Italic text&lt;/del&gt;
+&lt;/p&gt;
+</code></pre>
+<h1 id="images--gifs">Images &amp; Gifs</h1>
+<pre><code class="language-md">![Alt Text](https://octodex.github.com/images/nyantocat.gif)
+</code></pre>
+<p>Produces the following HTML:</p>
+<pre><code class="language-html">&lt;img src=&quot;https://octodex.github.com/images/nyantocat.gif&quot; alt=&quot;Alt Text&quot; /&gt;
+</code></pre>
+<p><img src="https://octodex.github.com/images/nyantocat.gif" alt="Nyantocat"></p>
+<h1 id="codeblocks">Codeblocks</h1>
+<p>To create cool and highlighted code snippets, you can use a codeblock!</p>
+<p>Codeblocks use the <a href="https://www.jetbrains.com/lp/mono/">JetBrais Mono</a> Font, which is a font designed for the best developer reading experience.</p>
+<pre><code>```elx
+iex&gt; &quot;Elixir&quot; |&gt; String.graphemes() |&gt; Enum.frequencies()
+%{&quot;E&quot; =&gt; 1, &quot;i&quot; =&gt; 2, &quot;l&quot; =&gt; 1, &quot;r&quot; =&gt; 1, &quot;x&quot; =&gt; 1}
+```
+</code></pre>
+<p>This produces the following HTML:</p>
+<pre><code class="language-html">&lt;pre&gt;
+  &lt;code&gt;
+      iex&gt; &quot;Elixir&quot; |&gt; String.graphemes() |&gt; Enum.frequencies()
+      %{&quot;E&quot; =&gt; 1, &quot;i&quot; =&gt; 2, &quot;l&quot; =&gt; 1, &quot;r&quot; =&gt; 1, &quot;x&quot; =&gt; 1}
+  &lt;/code&gt;
+&lt;/pre&gt;
+</code></pre>
+<h1 id="tables">Tables</h1>
+<p>Tables are used to neatly organise content into columns</p>
+<pre><code class="language-md">| Greeting | Thoughts             |
+| -------- | -------------------- |
+| hi       | boring               |
+| hello    | slightly less boring |
+| hey      | not boring at all    |
+</code></pre>
+<p>Produces the following HTML:</p>
+<pre><code>&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Greeting&lt;/th&gt;
+      &lt;th&gt;Thoughts&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;hi&lt;/td&gt;
+      &lt;td&gt;boring&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;hello&lt;/td&gt;
+      &lt;td&gt;slightly less boring&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;hey&lt;/td&gt;
+      &lt;td&gt;not boring at all&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+</code></pre>
+  </div>
+  <h1 data-abell-ksqsTl>Share</h1>
+    <div data-abell-ksqsTl>
+        <a href="https://twitter.com/share?text=Markdown Syntax Guide - &url=https://harshhhdev.github.io/calvera/markdown//markdown" target="_blank" title="Share on Twitter" data-abell-ksqsTl>
+            <i data-feather="twitter" data-abell-ksqsTl></i>
+        </a>
+        <a href="https://facebook.com/sharer/sharer.php?u=https://harshhhdev.github.io/calvera/markdown//markdown" target="_blank" title="Share on FaceBook" data-abell-ksqsTl>
+            <i data-feather="facebook" data-abell-ksqsTl></i>
+        </a>
+        <a href="whatsapp://send?text=https://harshhhdev.github.io/calvera/markdown//markdown" target="_blank" title="Share on WhatsApp" data-abell-ksqsTl>
+            <i data-feather="message-square" data-abell-ksqsTl></i>
+        </a>
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://harshhhdev.github.io/calvera/markdown//markdown" target="_blank" title="Share on Linkedin" data-abell-ksqsTl>
+            <i data-feather="linkedin" data-abell-ksqsTl></i>
+        </a>
+    </div>
+  <script src="https://utteranc.es/client.js"
+      repo="harshhhdev/harshhhdev.github.io"
+      issue-term="pathname"
+      theme="dark-blue"
+      crossorigin="anonymous"
+  async>
+  </script>
+  <footer data-abell-jLzQID>
+    <p class="day" data-abell-jLzQID></p>
+    <p class="copyright" data-abell-jLzQID></p>
+  </footer>
+  </main>
+
+<script src="../bundled-js/main.abell.js"></script>
+
+
+
+
+</body>
+<script src="https://unpkg.com/feather-icons@4.28.0/dist/feather.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.0/highlight.min.js"></script>
+    <script src="../static-assets/DarkMode.js"></script>
+        <script src="../static-assets/Navbar.js"></script>
+    <script>
+      feather.replace()
+      hljs.highlightAll()
+      SetTheme()
+    </script>
+</html>

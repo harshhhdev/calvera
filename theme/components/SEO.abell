@@ -1,7 +1,0 @@
-<AbellComponent>
-<template>
-    <link href="https://fonts.googleapis.com/css2?family=Lexend&display=swap|Lexend:100,200,300,400,500,600,700,800,900" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
-    <link rel="icon" href="{{ props.$root }}/static-assets/images/favicon.ico"/>
-</template>
-</AbellComponent>

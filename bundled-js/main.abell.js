@@ -1,30 +1,11 @@
-<AbellComponent>
-<template>
-  <footer>
-    <p class="day"></p>
-    <p class="copyright"></p>
-  </footer>
-</template>
 
-<style>
-  footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 50px 0;
-    color: var(--main);
-  }
-
-  p {
-    margin: 5px 0;
-  }
-</style>
-
-<script>
   const day = new Date()
   const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
 
   document.querySelector('p.day').innerText = `No tracking, no ads. Happy ${days[day.getDay()]}!`
   document.querySelector('p.copyright').innerHTML = `© ${day.getFullYear()}, <a href="https://harshhhdev.github.io/">Harsh Singh</a>`
-</script>
-</AbellComponent>
+
+      feather.replace()
+      hljs.highlightAll()
+      SetTheme()
+    
