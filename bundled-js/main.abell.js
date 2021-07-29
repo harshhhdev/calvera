@@ -7,5 +7,4 @@
 
       feather.replace()
       hljs.highlightAll()
-      SetTheme()
     

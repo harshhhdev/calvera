@@ -20,9 +20,9 @@
                 <pre data-abell-gWxUUe>> ~/harshsingh/</pre>
             </div>
             <div class="nav-links" data-abell-gWxUUe>
-                <a href='/#blog' data-abell-gWxUUe>Blog</a>
-                <a href='/uses' data-abell-gWxUUe>Uses</a>
-                <a href='/talks' data-abell-gWxUUe>Talks</a>
+                <a href='/calvera/#blog' data-abell-gWxUUe>Blog</a>
+                <a href='/calvera/uses' data-abell-gWxUUe>Uses</a>
+                <a href='/calvera/talks' data-abell-gWxUUe>Talks</a>
                 <i data-feather="moon" onclick="ToggleTheme()" data-abell-gWxUUe></i>
                 <i data-feather="sun" onclick="ToggleTheme()" data-abell-gWxUUe></i>
             </div>
@@ -57,6 +57,13 @@
     <main id="blog" data-abell-egTTra>
     <div data-abell-egTTra>
       <article data-abell-egTTra>
+          <h3 data-abell-egTTra><a href="github-actions/" data-abell-egTTra>Automated deployment for Abell websites</a></h3>
+          <p class="createdat-date" data-abell-egTTra>Published on Thu Jul 29 2021</p>
+          <p class="description" data-abell-egTTra>Setup GitHub actions with your Abell.js project to deploy your static websites automatically</p>
+          <a class="read" href="github-actions/" data-abell-egTTra>Read More</a>
+        </article>
+        
+        <article data-abell-egTTra>
           <h3 data-abell-egTTra><a href="getting-started/" data-abell-egTTra>Getting Started With Calvera</a></h3>
           <p class="createdat-date" data-abell-egTTra>Published on Tue Jul 06 2021</p>
           <p class="description" data-abell-egTTra>Helps you get started with Calvera. Goes over the basics, how to customise, and how to contribute to the project</p>
@@ -92,14 +99,45 @@
   </footer>
   <script src="https://unpkg.com/feather-icons@4.28.0/dist/feather.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.0/highlight.min.js"></script>
-    <script src="/static-assets/DarkMode.js"></script>
-        <script src="/static-assets/Navbar.js"></script>
+    <script src="./static-assets/DarkMode.js"></script>
+    <script src="./static-assets/Navbar.js"></script>
     <script>
       feather.replace()
       hljs.highlightAll()
-      SetTheme()
     </script>
+<script>
+const SetTheme = (theme) => {
+  console.log(theme)
 
+  const sun = document.querySelector('svg.feather-sun')
+  const moon = document.querySelector('svg.feather-moon')
+
+  if (theme === 'light') {
+    sun.style.display = 'block'
+    moon.style.display = 'none'
+
+    document.body.classList.add('light')
+
+    window.localStorage.setItem('theme', 'light')
+  } else if (theme === 'dark') {
+    sun.style.display = 'none'
+    moon.style.display = 'block'
+
+    document.body.classList.remove('light')
+
+    localStorage.setItem('theme', 'dark')
+  }
+}
+
+const ToggleTheme = () => {
+  if (document.body.className === 'light') SetTheme('dark')
+  else if (document.body.className === '') SetTheme('light')
+}
+
+const theme = window.localStorage.getItem('theme')
+
+SetTheme(theme)
+</script>
 <script src="bundled-js/main.abell.js"></script>
 
 

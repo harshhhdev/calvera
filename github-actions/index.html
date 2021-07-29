@@ -1,0 +1,158 @@
+
+
+<html lang="en">
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend&display=swap|Lexend:100,200,300,400,500,600,700,800,900" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <link rel="icon" href="../static-assets/images/favicon.ico"/>
+  <link rel="stylesheet" href="../static-assets/styles.css"/>
+    <link rel="stylesheet" href="../static-assets/index.css"/>
+  
+  <title>Automated deployment for Abell websites</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/styles/atom-one-dark.min.css" />
+
+<link rel="stylesheet" href="../bundled-css/main.abell.css"/>
+</head>
+<body>
+  <nav data-abell-gWxUUe>
+        <main data-abell-gWxUUe>
+            <div class="nav-name" data-abell-gWxUUe>
+                <pre data-abell-gWxUUe>> ~/harshsingh/</pre>
+            </div>
+            <div class="nav-links" data-abell-gWxUUe>
+                <a href='/calvera/#blog' data-abell-gWxUUe>Blog</a>
+                <a href='/calvera/uses' data-abell-gWxUUe>Uses</a>
+                <a href='/calvera/talks' data-abell-gWxUUe>Talks</a>
+                <i data-feather="moon" onclick="ToggleTheme()" data-abell-gWxUUe></i>
+                <i data-feather="sun" onclick="ToggleTheme()" data-abell-gWxUUe></i>
+            </div>
+            <div class="hamburger" data-abell-gWxUUe>
+              <span class="bar" data-abell-gWxUUe></span>
+              <span class="bar" data-abell-gWxUUe></span>
+              <span class="bar" data-abell-gWxUUe></span>
+            </div>
+        </main>
+    </nav>
+  <main class="container">
+  <div data-abell-fPUgoe>
+        <h1 data-abell-fPUgoe>Automated deployment for Abell websites</h1>
+        <p data-abell-fPUgoe>Published on Thu Jul 29 2021</p>
+    </div>
+  <div class="blog">
+    <h1 id="what-is-automated-deployment">What is automated deployment?</h1>
+<p>As taken from <a href="https://developerexperience.io/practices/automated-deployment#:~:text=Automated%20Deployment%20is%20a%20practice,development%20right%20through%20to%20production.">DX.io</a>, &quot;automated deployment is a practise that allows you to ship code fully or semi-automatically across several stages of the development process&quot;.</p>
+<p>In our case, we'll be setting up <a href="https://github.com/features/actions">GitHub Actions</a> to automatically deploy our Abell website to <a href="https://pages.github.com/">GitHub pages</a></p>
+<h1 id="creating-and-setting-up-our-nodejs-github-action">Creating and setting up our Node.js GitHub action</h1>
+<p>There's a <a href="https://github.com/marketplace/actions/deploy-to-github-pages">GitHub Pages</a> deployment extension on <a href="https://github.com/marketplace/actions">GitHub Actions Marketplace</a>,</p>
+<p>Go into your website's repository, and navigate over to the &quot;actions&quot; tab.</p>
+<p>You should see some popular workflows under the tab of &quot;Workflows made for your JavaScript repository&quot;</p>
+<p>Select the <a href="https://github.com/actions/starter-workflows/blob/7135450ec14e7e47bf3e41dd65d399e5e315fa39/ci/node.js.yml">&quot;Node.js&quot; workflow by GitHub Actions</a>, and click &quot;Setup this workflow&quot;</p>
+<p>It should create a new file in the directory .github/workflows/node.js.yml with the boilerplate code.</p>
+<p>Head down to strategy &gt; matrix &gt; node-version and set the correct version of Node.js which this project uses</p>
+<p>In my case, I'll set this to 16.x</p>
+<p>Next, we'll need to change the steps for it to suit our Abell app.</p>
+<p>I'm using <a href="https://yarnpkg.com/">yarn</a> for this project, but if you're using <a href="https://npmjs.com/">NPM</a>, make sure to adjust the steps accordingly.</p>
+<pre><code class="language-yml">steps:
+  with:
+    # cache: 'npm'
+    cache: 'yarn'
+  # run: rm -rf node_modules &amp;&amp; npm ci
+  - run: rm -rf node_modules &amp;&amp; yarn install --frozen-lockfile
+  # run: npm run build
+  - run: yarn build
+</code></pre>
+<h1 id="deploying-our-app-to-github-pages">Deploying our app to GitHub pages</h1>
+<p>To deploy our output to GitHub pages, we'll use the <a href="https://github.com/marketplace/actions/deploy-to-github-pages">Deploy to GitHub Pages</a> action.</p>
+<p>In your jobs, below the steps, we can start setting up our action</p>
+<pre><code class="language-yml">- name: Deploy
+  uses: JamesIves/github-pages-deploy-action@4.1.4
+  with:
+    branch: gh-pages
+    folder: dist
+</code></pre>
+<p>By default, all Abell projects use dist for their output directory, though this can be customised in the <a href="https://abelljs.org/guide/api-reference/#abellprograminfo-ltobjectgt">Abell config</a>.</p>
+<p>Now commit this file to your master branch.</p>
+<h1 id="setting-up-github-pages">Setting Up GitHub Pages</h1>
+<p>Now that we're done setting up our workflow, let's make sure GitHub pages works properly.</p>
+<p>Go into your repo &gt; settings &gt; pages.</p>
+<p>Select gh-pages as your branch, and hit save.</p>
+<p>Wait for the action to run, and your website should now be live!</p>
+<p>Now, when you commit to your master branch, the files will automatically be built and deployed to your GitHub pages. Cool!</p>
+  </div>
+  <h1 data-abell-cGYiri>Share</h1>
+    <div data-abell-cGYiri>
+        <a href="https://twitter.com/share?text=Automated deployment for Abell websites - &url=https://harshhhdev.github.io/calvera/github-actions//github-actions" target="_blank" title="Share on Twitter" data-abell-cGYiri>
+            <i data-feather="twitter" data-abell-cGYiri></i>
+        </a>
+        <a href="https://facebook.com/sharer/sharer.php?u=https://harshhhdev.github.io/calvera/github-actions//github-actions" target="_blank" title="Share on FaceBook" data-abell-cGYiri>
+            <i data-feather="facebook" data-abell-cGYiri></i>
+        </a>
+        <a href="whatsapp://send?text=https://harshhhdev.github.io/calvera/github-actions//github-actions" target="_blank" title="Share on WhatsApp" data-abell-cGYiri>
+            <i data-feather="message-square" data-abell-cGYiri></i>
+        </a>
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://harshhhdev.github.io/calvera/github-actions//github-actions" target="_blank" title="Share on Linkedin" data-abell-cGYiri>
+            <i data-feather="linkedin" data-abell-cGYiri></i>
+        </a>
+    </div>
+  <script src="https://utteranc.es/client.js"
+      repo="harshhhdev/harshhhdev.github.io"
+      issue-term="pathname"
+      theme="dark-blue"
+      crossorigin="anonymous"
+  async>
+  </script>
+  <footer data-abell-hHyzrs>
+    <p class="day" data-abell-hHyzrs></p>
+    <p class="copyright" data-abell-hHyzrs></p>
+  </footer>
+  </main>
+<script>
+const SetTheme = (theme) => {
+  console.log(theme)
+
+  const sun = document.querySelector('svg.feather-sun')
+  const moon = document.querySelector('svg.feather-moon')
+
+  if (theme === 'light') {
+    sun.style.display = 'block'
+    moon.style.display = 'none'
+
+    document.body.classList.add('light')
+
+    window.localStorage.setItem('theme', 'light')
+  } else if (theme === 'dark') {
+    sun.style.display = 'none'
+    moon.style.display = 'block'
+
+    document.body.classList.remove('light')
+
+    localStorage.setItem('theme', 'dark')
+  }
+}
+
+const ToggleTheme = () => {
+  if (document.body.className === 'light') SetTheme('dark')
+  else if (document.body.className === '') SetTheme('light')
+}
+
+const theme = window.localStorage.getItem('theme')
+
+SetTheme(theme)
+</script>
+<script src="../bundled-js/main.abell.js"></script>
+
+
+
+
+</body>
+<script src="https://unpkg.com/feather-icons@4.28.0/dist/feather.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.0/highlight.min.js"></script>
+    <script src="../static-assets/DarkMode.js"></script>
+    <script src="../static-assets/Navbar.js"></script>
+    <script>
+      feather.replace()
+      hljs.highlightAll()
+    </script>
+</html>
