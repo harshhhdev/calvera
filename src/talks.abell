@@ -28,6 +28,6 @@
     <Talks props={globalMeta} />
   </main>
   <Footer />
-  <Scripts />
+  <Scripts props={$root} />
 </body>
 </html>
