@@ -1,0 +1,5 @@
+{
+  "title": "Automated deployment for Abell websites",
+  "$createdAt": "29 July 2021",
+  "description": "Setup GitHub actions with your Abell.js project to deploy your static websites automatically"
+}

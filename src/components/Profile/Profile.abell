@@ -29,6 +29,7 @@ main {
     justify-content: center;
     align-items: center;
     height: 50vh;
+    min-height: 500px;
 }
 
 img {

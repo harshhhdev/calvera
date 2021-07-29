@@ -6,9 +6,9 @@
                 <pre>> ~/harshsingh/</pre>
             </div>
             <div class="nav-links">
-                <a href='/#blog'>Blog</a>
-                <a href='/uses'>Uses</a>
-                <a href='/talks'>Talks</a>
+                <a href='/calvera/#blog'>Blog</a>
+                <a href='/calvera/uses'>Uses</a>
+                <a href='/calvera/talks'>Talks</a>
                 <i data-feather="moon" onclick="ToggleTheme()"></i>
                 <i data-feather="sun" onclick="ToggleTheme()"></i>
             </div>
@@ -66,4 +66,38 @@ svg:hover {
     cursor: pointer;
 }
 </style>
+
+<script inlined>
+const SetTheme = (theme) => {
+  console.log(theme)
+
+  const sun = document.querySelector('svg.feather-sun')
+  const moon = document.querySelector('svg.feather-moon')
+
+  if (theme === 'light') {
+    sun.style.display = 'block'
+    moon.style.display = 'none'
+
+    document.body.classList.add('light')
+
+    window.localStorage.setItem('theme', 'light')
+  } else if (theme === 'dark') {
+    sun.style.display = 'none'
+    moon.style.display = 'block'
+
+    document.body.classList.remove('light')
+
+    localStorage.setItem('theme', 'dark')
+  }
+}
+
+const ToggleTheme = () => {
+  if (document.body.className === 'light') SetTheme('dark')
+  else if (document.body.className === '') SetTheme('light')
+}
+
+const theme = window.localStorage.getItem('theme')
+
+SetTheme(theme)
+</script>
 </AbellComponent>

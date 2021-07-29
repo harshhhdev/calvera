@@ -28,6 +28,6 @@
     <BlogsList props={contentArray} />
   </main>
   <Footer />
-  <Scripts />
+  <Scripts props={$root} />
 </body>
 </html>
