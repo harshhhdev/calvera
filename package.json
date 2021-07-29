@@ -1,15 +1,12 @@
 {
-  "name": "default",
   "version": "1.0.0",
-  "description": "Default Starter for Abell",
+  "description": "Clean, minimal and fast portfolio/blog theme built with Abell",
   "main": "abell.config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "abell serve",
     "build": "abell build"
   },
-  "keywords": [],
-  "author": "abelljs",
   "license": "MIT",
   "devDependencies": {
     "abell": "^0.10.3"
