@@ -1,5 +1,6 @@
 {{
-  const { globalMeta, $root } = Abell;
+  const { globalMeta } = Abell;
+  const $root = '.'
 
   const Navbar = require('./components/Navbar.abell');
   const BlogsList = require('./components/BlogsList.abell');
