@@ -1,7 +1,24 @@
 <AbellComponent>
-<template>
+  <template>
+    <link rel="stylesheet" href="{{ props.$root }}/static-assets/styles.css"/>
+    <link rel="stylesheet" href="{{ props.$root }}/static-assets/uses.css"/>
+    <meta name="title" content="calvera"/>
+    <meta property="og:title" content="calvera"/>
+    <meta property="twitter:title" content="calvera"/>
+    <meta property="og:image" content="{{ props.$root }}/static-assets/Calvera.png">
+    <meta name="description" content="Minimal blog + portfolio template for Abell.js"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://harshhhdev.github.io/calvera"/>
+    <meta property="og:description" content="Minimal blog + portfolio template for Abell.js"/>
+    <meta property="twitter:url" content="https://harshhhdev.github.io/calvera"/>
+    <meta property="twitter:description" content="Minimal blog + portfolio template for Abell.js"/>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <meta name="theme-color" content="#54bce1"/>
     <link href="https://fonts.googleapis.com/css2?family=Lexend&display=swap|Lexend:100,200,300,400,500,600,700,800,900" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
     <link rel="icon" href="{{ props.$root }}/static-assets/images/favicon.ico"/>
-</template>
+    <meta property="og:image" content="{{ props.$root }}/static-assets/Calvera.jpg">
+  </template>
 </AbellComponent>

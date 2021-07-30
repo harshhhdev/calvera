@@ -2,15 +2,15 @@
 <template>
     <main class="profile">
         <div class="img-cont">
-            <img src="https://media.discordapp.net/attachments/863926316356337684/865780192907100191/210131841_527897364921924_1561536371299956248_n.png" />
+            <img src="https://thispersondoesnotexist.com/image" alt="Profile" />
             <div class="socials">
-                <a href="{{ props.globalMeta.linkedin }}" target="_blank">
+                <a href="{{ props.globalMeta.linkedin }}" target="_blank" rel="noreferrer">
                     <i data-feather="linkedin"></i>
                 </a>
-                <a href="https://twitter.com/{{ props.globalMeta.twitter }}/" target="_blank">
+                <a href="https://twitter.com/{{ props.globalMeta.twitter }}/" target="_blank" rel="noreferrer">
                     <i data-feather="twitter"></i>
                 </a>
-                <a href="https://github.com/{{ props.globalMeta.github }}/" target="_blank">
+                <a href="https://github.com/{{ props.globalMeta.github }}/" target="_blank" rel="noreferrer">
                     <i data-feather="github"></i>
                 </a>
             </div>
@@ -18,7 +18,7 @@
         <div class="profile-info">
             <h1>{{ props.globalMeta.title }}</h1>
             <p>{{ props.globalMeta.description }}</p>
-            <a href="mailto:{{props.globalMeta.email}}">{{ props.globalMeta.email }}</a>
+            <a href="mailto:{{props.globalMeta.email}}" rel="noreferrer" target="_blank">{{ props.globalMeta.email }}</a>
         </div>
     </main>
 </template>

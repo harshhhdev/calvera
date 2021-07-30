@@ -2,16 +2,16 @@
 <template>
     <h1>Share</h1>
     <div>
-        <a href="https://twitter.com/share?text={{props.meta.title}} - &url={{props.link}}/{{props.meta.$path}}" target="_blank" title="Share on Twitter">
+        <a href="https://twitter.com/share?text={{props.meta.title}} - &url={{props.link}}/{{props.meta.$path}}" target="_blank" title="Share on Twitter" rel="noreferrer">
             <i data-feather="twitter"></i>
         </a>
-        <a href="https://facebook.com/sharer/sharer.php?u={{props.link}}/{{props.meta.$path}}" target="_blank" title="Share on FaceBook">
+        <a href="https://facebook.com/sharer/sharer.php?u={{props.link}}/{{props.meta.$path}}" target="_blank" title="Share on FaceBook" rel="noreferrer">
             <i data-feather="facebook"></i>
         </a>
-        <a href="whatsapp://send?text={{props.link}}/{{props.meta.$path}}" target="_blank" title="Share on WhatsApp">
+        <a href="whatsapp://send?text={{props.link}}/{{props.meta.$path}}" target="_blank" title="Share on WhatsApp" rel="noreferrer">
             <i data-feather="message-square"></i>
         </a>
-        <a href="https://www.linkedin.com/sharing/share-offsite/?url={{props.link}}/{{props.meta.$path}}" target="_blank" title="Share on Linkedin">
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url={{props.link}}/{{props.meta.$path}}" target="_blank" title="Share on Linkedin" rel="noreferrer">
             <i data-feather="linkedin"></i>
         </a>
     </div>

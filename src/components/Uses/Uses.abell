@@ -17,7 +17,7 @@
             {{
               software.map(meta => /* html */`
                 <div class="section">
-                  <a href="https://${meta.link}/">${ meta.name }</a>
+                  <a href="https://${meta.link}/" rel="noreferrer">${ meta.name }</a>
                     <p>${meta.description}</p>
                   </div>
               `);
@@ -30,7 +30,7 @@
                 {{
                   tech.map(meta => /* html */`
                     <div class="section">
-                      <a href="https://${meta.link}/">${ meta.name }</a>
+                      <a href="https://${meta.link}/" rel="noreferrer">${ meta.name }</a>
                       <p>${meta.description}</p>
                     </div>
                   `);
@@ -43,7 +43,7 @@
               {{
                 gear.map(meta => /* html */`
                       <div class="section">
-                          <a href="https://${meta.link}/">${ meta.name }</a>
+                          <a href="https://${meta.link}/" rel="noreferrer">${ meta.name }</a>
                           <p>${meta.description}</p>
                       </div>
                       `);

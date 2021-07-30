@@ -21,7 +21,7 @@
               ${ meta.role }
             </div>
           </div>
-          <a href="https://${ meta.link }" target="_blank">${ meta.link }</a>
+          <a href="https://${ meta.link }" target="_blank" rel="noreferrer">${ meta.link }</a>
         </div>
         `); }}
       </div>
