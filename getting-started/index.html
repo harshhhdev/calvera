@@ -96,25 +96,26 @@ cd calvera
   </main>
 <script>
 const SetTheme = (theme) => {
-  console.log(theme)
-
-  const sun = document.querySelector('svg.feather-sun')
-  const moon = document.querySelector('svg.feather-moon')
-
   if (theme === 'light') {
-    sun.style.display = 'block'
-    moon.style.display = 'none'
+    const sun = document.querySelector('.feather-sun' + "[data-abell-gWxUUe]")
+    const moon = document.querySelector('svg.feather-moon' + "[data-abell-gWxUUe]")
 
     document.body.classList.add('light')
 
     window.localStorage.setItem('theme', 'light')
+
+    sun.style.display = 'block'
+    moon.style.display = 'none'
   } else if (theme === 'dark') {
-    sun.style.display = 'none'
-    moon.style.display = 'block'
+    const sun = document.querySelector('.feather-sun' + "[data-abell-gWxUUe]")
+    const moon = document.querySelector('svg.feather-moon' + "[data-abell-gWxUUe]")
 
     document.body.classList.remove('light')
 
     localStorage.setItem('theme', 'dark')
+
+    sun.style.display = 'none'
+    moon.style.display = 'block'
   }
 }
 
@@ -125,17 +126,17 @@ const ToggleTheme = () => {
 
 const theme = window.localStorage.getItem('theme')
 
-SetTheme(theme)
+setTimeout(() => {
+  theme === null ? SetTheme('dark') : SetTheme(theme)
+}, 100)
 </script>
 <script src="../bundled-js/main.abell.js"></script>
-
 
 
 
 </body>
 <script src="https://unpkg.com/feather-icons@4.28.0/dist/feather.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.0/highlight.min.js"></script>
-    <script src="../static-assets/DarkMode.js"></script>
     <script src="../static-assets/Navbar.js"></script>
     <script>
       feather.replace()
