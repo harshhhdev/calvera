@@ -69,25 +69,26 @@ svg:hover {
 
 <script inlined>
 const SetTheme = (theme) => {
-  console.log(theme)
-
-  const sun = document.querySelector('svg.feather-sun')
-  const moon = document.querySelector('svg.feather-moon')
-
   if (theme === 'light') {
-    sun.style.display = 'block'
-    moon.style.display = 'none'
+    const sun = scopedSelector('.feather-sun')
+    const moon = scopedSelector('svg.feather-moon')
 
     document.body.classList.add('light')
 
     window.localStorage.setItem('theme', 'light')
+
+    sun.style.display = 'block'
+    moon.style.display = 'none'
   } else if (theme === 'dark') {
-    sun.style.display = 'none'
-    moon.style.display = 'block'
+    const sun = scopedSelector('.feather-sun')
+    const moon = scopedSelector('svg.feather-moon')
 
     document.body.classList.remove('light')
 
     localStorage.setItem('theme', 'dark')
+
+    sun.style.display = 'none'
+    moon.style.display = 'block'
   }
 }
 
@@ -98,6 +99,8 @@ const ToggleTheme = () => {
 
 const theme = window.localStorage.getItem('theme')
 
-SetTheme(theme)
+setTimeout(() => {
+  theme === null ? SetTheme('dark') : SetTheme(theme)
+}, 100)
 </script>
 </AbellComponent>
