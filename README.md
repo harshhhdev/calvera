@@ -1,6 +1,6 @@
 <p align="center">
   <img src="https://github.com/harshhhdev/calvera/blob/master/Calvera.jpg?raw=true" />
-  <a href="https://geethoob.vercel.app/">
+  <a href="https://harshhhdev.github.io/calvera">
     <h2 align="center">Calvera</h2>
   </a>
 </p> 
