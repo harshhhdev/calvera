@@ -14,20 +14,20 @@ module.exports = {
     repo: 'harshhhdev/harshhhdev.github.io',
     talks: [
       {
+        name: 'Database Design 101',
+        conf: 'Prisma Meetup',
+        location: 'Berlin',
+        date: '31 August 2021',
+        role: 'Speaker',
+        link: 'youtu.be/PUfqXnWhwLk'
+      },
+      {
         name: 'Talk Title',
         conf: 'Conference 2006',
         location: 'Noida',
         date: '26 July 2006',
         role: 'Main Speaker',
         link: 'reactindia.io',
-      },
-      {
-        name: 'Your Talk',
-        conf: 'Prisma Day',
-        location: 'Berlin',
-        date: '15 September 2014',
-        role: 'Main Speaker',
-        link: 'prisma.io/day'
       },
     ],
     uses: {
